@@ -11,6 +11,7 @@ namespace Lab01_About_Me_Quiz
             count += QuestionOne();
             count += QuestionTwo();
             count += QuestionThree();
+            count += QuestionFour();
             Console.Write($"You answered {count} out of 5 questions correctly. ");
             Console.WriteLine(GetResults(count));
             Console.WriteLine("Press any key to exit the quiz");
@@ -59,6 +60,20 @@ namespace Lab01_About_Me_Quiz
             }
         }
 
+        static int QuestionFour()
+        {
+            Console.WriteLine("How many dogs do I have?");
+            string answer = Console.ReadLine();
+            if (CheckAnswer(4, answer))
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         static bool CheckAnswer(int question, string answer)
         {
             switch (question)
@@ -90,7 +105,15 @@ namespace Lab01_About_Me_Quiz
                     {
                         return false;
                     }
-
+                case 4:
+                    if (answer == "2")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 default:
                     return false;
             }
