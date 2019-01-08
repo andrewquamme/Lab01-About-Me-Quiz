@@ -13,12 +13,34 @@ namespace Lab01_About_Me_Quiz
 
         static int QuestionOne()
         {
-            Console.WriteLine("")
+            Console.WriteLine("In what state did I grow up?");
+            string answerOne = Console.ReadLine();
+            if(CheckAnswer(1, answerOne))
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         static bool CheckAnswer(int question, string answer)
         {
-
+            switch (question)
+            {
+                case 1:
+                    if(answer.ToUpper() == "WI" || answer.ToUpper() == "WISCONSIN")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                default:
+                    return false;
+            }
         }
     }
 }
