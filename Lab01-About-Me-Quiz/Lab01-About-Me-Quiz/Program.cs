@@ -6,7 +6,19 @@ namespace Lab01_About_Me_Quiz
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int count = 0;
+            Console.WriteLine("Take my quiz and learn a little about me!");
+            count += QuestionOne();
+        }
+
+        static int QuestionOne()
+        {
+            Console.WriteLine("")
+        }
+
+        static bool CheckAnswer(int question, string answer)
+        {
+
         }
     }
 }
