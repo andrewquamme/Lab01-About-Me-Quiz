@@ -9,6 +9,7 @@ namespace Lab01_About_Me_Quiz
             int count = 0;
             Console.WriteLine("Take my quiz and learn a little about me!");
             count += QuestionOne();
+            ShowResults(count);
         }
 
         static int QuestionOne()
@@ -40,6 +41,32 @@ namespace Lab01_About_Me_Quiz
                     }
                 default:
                     return false;
+            }
+        }
+
+        static void ShowResults(int count)
+        {
+            Console.Write($"You answered {count} out of 5 questions correctly. ");
+            switch (count)
+            {
+                case 5:
+                    Console.Write("Awesome job!");
+                    break;
+                case 4:
+                    Console.Write("You know me pretty well!");
+                    break;
+                case 3:
+                    Console.Write("Almost!");
+                    break;
+                case 2:
+                    Console.Write("Better luck next time!");
+                    break;
+                case 1:
+                    Console.Write("Ouch...");
+                    break;
+                case 0:
+                    Console.Write("It's like you don't even know me.");
+                    break;
             }
         }
     }
