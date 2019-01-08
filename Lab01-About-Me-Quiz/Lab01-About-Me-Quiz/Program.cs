@@ -103,7 +103,7 @@ namespace Lab01_About_Me_Quiz
                         return false;
                     }
                 case 2:
-                    if (answer.ToUpper() == "Y" || answer.ToUpper() == "Yes")
+                    if (answer.ToUpper() == "Y" || answer.ToUpper() == "YES")
                     {
                         return true;
                     }
@@ -112,7 +112,7 @@ namespace Lab01_About_Me_Quiz
                         return false;
                     }
                 case 3:
-                    if (answer.ToUpper() == "Y" || answer.ToUpper() == "Yes")
+                    if (answer.ToUpper() == "Y" || answer.ToUpper() == "YES")
                     {
                         return true;
                     }
@@ -130,7 +130,7 @@ namespace Lab01_About_Me_Quiz
                         return false;
                     }
                 case 5:
-                    if (answer.ToUpper() == "N" || answer.ToUpper() == "No")
+                    if (answer.ToUpper() == "N" || answer.ToUpper() == "NO")
                     {
                         return true;
                     }

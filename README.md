@@ -1,12 +1,14 @@
 # Lab01-About-Me-Quiz
 
-### Directions
-Create an “About Me” quiz that has at least 5 different questions.
-Each question should be something fun, unique, or interesting about yourself
+### Purpose
+To create an “About Me” quiz that has at least 5 different questions
+to gain practice working with methods and various return types.
+
 ### Program Specifications
-Your solution should include the following:
+The solution includes the following:
 * Main method
 * External methods- (at least 3 non-void return types)
 * Different return types
 * At least one try/catch/finally implementation
 
+![Answers](Answers.png)
