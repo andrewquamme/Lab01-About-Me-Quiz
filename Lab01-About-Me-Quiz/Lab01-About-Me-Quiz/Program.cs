@@ -12,6 +12,7 @@ namespace Lab01_About_Me_Quiz
             count += QuestionTwo();
             count += QuestionThree();
             count += QuestionFour();
+            count += QuestionFive();
             Console.Write($"You answered {count} out of 5 questions correctly. ");
             Console.WriteLine(GetResults(count));
             Console.WriteLine("Press any key to exit the quiz");
@@ -74,6 +75,20 @@ namespace Lab01_About_Me_Quiz
             }
         }
 
+        static int QuestionFive()
+        {
+            Console.WriteLine("Do I like the Seahawks? Yes/No");
+            string answer = Console.ReadLine();
+            if (CheckAnswer(5, answer))
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         static bool CheckAnswer(int question, string answer)
         {
             switch (question)
@@ -107,6 +122,15 @@ namespace Lab01_About_Me_Quiz
                     }
                 case 4:
                     if (answer == "2")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                case 5:
+                    if (answer.ToUpper() == "N" || answer.ToUpper() == "No")
                     {
                         return true;
                     }
