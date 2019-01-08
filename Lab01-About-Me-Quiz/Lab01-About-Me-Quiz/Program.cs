@@ -10,7 +10,8 @@ namespace Lab01_About_Me_Quiz
             Console.WriteLine("Take my quiz and learn a little about me!");
             count += QuestionOne();
             count += QuestionTwo();
-            ShowResults(count);
+            Console.Write($"You answered {count} out of 5 questions correctly. ");
+            Console.WriteLine(GetResults(count));
             Console.WriteLine("Press any key to exit the quiz");
             Console.ReadLine();
         }
@@ -71,29 +72,23 @@ namespace Lab01_About_Me_Quiz
             }
         }
 
-        static void ShowResults(int count)
+        static string GetResults(int count)
         {
-            Console.Write($"You answered {count} out of 5 questions correctly. ");
+            
             switch (count)
             {
                 case 5:
-                    Console.WriteLine("Awesome job!");
-                    break;
+                    return "Awesome job!";
                 case 4:
-                    Console.WriteLine("You know me pretty well!");
-                    break;
+                    return "You know me pretty well!";
                 case 3:
-                    Console.WriteLine("Almost!");
-                    break;
+                    return "Almost!";
                 case 2:
-                    Console.WriteLine("Better luck next time!");
-                    break;
+                    return "Better luck next time!";
                 case 1:
-                    Console.WriteLine("Ouch...");
-                    break;
-                case 0:
-                    Console.WriteLine("It's like you don't even know me.");
-                    break;
+                    return "Ouch...";
+                default:
+                    return "It's like you don't even know me.";
             }
         }
     }
