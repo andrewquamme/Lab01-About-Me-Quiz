@@ -65,7 +65,17 @@ namespace Lab01_About_Me_Quiz
         {
             Console.WriteLine("How many dogs do I have?");
             string answer = Console.ReadLine();
-            if (CheckAnswer(4, answer))
+
+            try
+            {
+                int numAnswer = Convert.ToInt32(answer);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You must enter a number.");
+            }
+
+            if (CheckAnswer(4,answer))
             {
                 return 1;
             }
