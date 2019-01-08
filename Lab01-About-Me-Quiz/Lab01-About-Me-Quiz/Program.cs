@@ -9,14 +9,31 @@ namespace Lab01_About_Me_Quiz
             int count = 0;
             Console.WriteLine("Take my quiz and learn a little about me!");
             count += QuestionOne();
+            count += QuestionTwo();
             ShowResults(count);
+            Console.WriteLine("Press any key to exit the quiz");
+            Console.ReadLine();
         }
 
         static int QuestionOne()
         {
             Console.WriteLine("In what state did I grow up?");
-            string answerOne = Console.ReadLine();
-            if(CheckAnswer(1, answerOne))
+            string answer = Console.ReadLine();
+            if(CheckAnswer(1, answer))
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        static int QuestionTwo()
+        {
+            Console.WriteLine("Was I in the military? Yes/No");
+            string answer = Console.ReadLine();
+            if (CheckAnswer(2, answer))
             {
                 return 1;
             }
@@ -39,6 +56,16 @@ namespace Lab01_About_Me_Quiz
                     {
                         return false;
                     }
+                case 2:
+                    if (answer.ToUpper() == "Y" || answer.ToUpper() == "Yes")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
                 default:
                     return false;
             }
@@ -50,22 +77,22 @@ namespace Lab01_About_Me_Quiz
             switch (count)
             {
                 case 5:
-                    Console.Write("Awesome job!");
+                    Console.WriteLine("Awesome job!");
                     break;
                 case 4:
-                    Console.Write("You know me pretty well!");
+                    Console.WriteLine("You know me pretty well!");
                     break;
                 case 3:
-                    Console.Write("Almost!");
+                    Console.WriteLine("Almost!");
                     break;
                 case 2:
-                    Console.Write("Better luck next time!");
+                    Console.WriteLine("Better luck next time!");
                     break;
                 case 1:
-                    Console.Write("Ouch...");
+                    Console.WriteLine("Ouch...");
                     break;
                 case 0:
-                    Console.Write("It's like you don't even know me.");
+                    Console.WriteLine("It's like you don't even know me.");
                     break;
             }
         }
