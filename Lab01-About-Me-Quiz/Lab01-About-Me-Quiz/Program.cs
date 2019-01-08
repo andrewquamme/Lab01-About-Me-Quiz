@@ -10,6 +10,7 @@ namespace Lab01_About_Me_Quiz
             Console.WriteLine("Take my quiz and learn a little about me!");
             count += QuestionOne();
             count += QuestionTwo();
+            count += QuestionThree();
             Console.Write($"You answered {count} out of 5 questions correctly. ");
             Console.WriteLine(GetResults(count));
             Console.WriteLine("Press any key to exit the quiz");
@@ -20,7 +21,7 @@ namespace Lab01_About_Me_Quiz
         {
             Console.WriteLine("In what state did I grow up?");
             string answer = Console.ReadLine();
-            if(CheckAnswer(1, answer))
+            if (CheckAnswer(1, answer))
             {
                 return 1;
             }
@@ -44,6 +45,20 @@ namespace Lab01_About_Me_Quiz
             }
         }
 
+        static int QuestionThree()
+        {
+            Console.WriteLine("Have I been to Iraq? Yes/No");
+            string answer = Console.ReadLine();
+            if (CheckAnswer(3, answer))
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         static bool CheckAnswer(int question, string answer)
         {
             switch (question)
@@ -58,6 +73,15 @@ namespace Lab01_About_Me_Quiz
                         return false;
                     }
                 case 2:
+                    if (answer.ToUpper() == "Y" || answer.ToUpper() == "Yes")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                case 3:
                     if (answer.ToUpper() == "Y" || answer.ToUpper() == "Yes")
                     {
                         return true;
